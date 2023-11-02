@@ -20,7 +20,9 @@ func main() {
 	var digits []int
 
 	for _, digitStr := range digitStrings {
-		digit, _ := strconv.Atoi(digitStr)
+		digit, err := strconv.Atoi(digitStr)
+		if err != nil {
+		}
 		digits = append(digits, digit)
 	}
 
