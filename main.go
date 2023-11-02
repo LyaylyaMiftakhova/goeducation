@@ -7,8 +7,11 @@ import (
 
 func main() {
 	n := 56322547
-	max := 0
+	max := findMaxDigit(n)
+	fmt.Println(max)
+}
 
+func findMaxDigit(n int) int {
 	nStr := strconv.Itoa(n)
 
 	var digitStrings []string
@@ -22,14 +25,18 @@ func main() {
 	for _, digitStr := range digitStrings {
 		digit, err := strconv.Atoi(digitStr)
 		if err != nil {
+			fmt.Printf("Ошибка при преобразовании строки %s в число: %v\n", digitStr, err)
 		}
 		digits = append(digits, digit)
 	}
+
+	max := 0
 
 	for _, digit := range digits {
 		if digit > max {
 			max = digit
 		}
 	}
-	fmt.Println(max)
+
+	return max
 }
