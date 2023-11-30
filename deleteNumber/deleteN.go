@@ -5,22 +5,19 @@ import (
 )
 
 func RemoveDigit(number, shouldDelete int) (int, error) {
-	// Преобразование числа в слайс цифр
-	digits := []int{}
-	for number > 0 {
-		digits = append(digits, number%10)
-		number /= 10
-	}
-
-	// Поиск и удаление цифры
+	// Поиск и удаление цифры, а также преобразование числа в слайс цифр
 	found := false
 	result := 0
-	for i := len(digits) - 1; i >= 0; i-- {
-		if digits[i] == shouldDelete {
+	for number > 0 {
+		digit := number % 10
+		number /= 10
+
+		if digit == shouldDelete {
 			found = true
 			continue
 		}
-		result = result*10 + digits[i]
+
+		result = result*10 + digit
 	}
 
 	// Если цифра для удаления не найдена, возвращаем ошибку

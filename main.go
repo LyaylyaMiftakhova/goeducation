@@ -14,6 +14,10 @@ func main() {
 	reversed := _return.GetReversedInt(12345678)
 	fmt.Println(reversed)
 
-	reversed := deleteNumber.RemoveDigit(34567, 7)
+	reversed, err := deleteNumber.RemoveDigit(34567, 7)
+	if err != nil {
+		fmt.Println("Ошибка:", err)
+		return
+	}
 	fmt.Println(reversed)
 }
