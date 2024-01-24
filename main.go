@@ -3,7 +3,8 @@ package main
 import (
 	"example.com/goeducation/culculations"
 	"example.com/goeducation/deleteNumber"
-	"example.com/goeducation/return"
+	"example.com/goeducation/myFirstServer"
+	_return "example.com/goeducation/return"
 	"fmt"
 )
 
@@ -20,4 +21,6 @@ func main() {
 		return
 	}
 	fmt.Println(reversed)
+
+	myFirstServer.MyFirstServer()
 }
