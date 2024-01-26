@@ -3,7 +3,7 @@ package main
 import (
 	"example.com/goeducation/culculations"
 	"example.com/goeducation/deleteNumber"
-	"example.com/goeducation/myFirstServer"
+	"example.com/goeducation/forPersonalTraining"
 	_return "example.com/goeducation/return"
 	"fmt"
 )
@@ -22,5 +22,8 @@ func main() {
 	}
 	fmt.Println(reversed)
 
-	myFirstServer.MyFirstServer()
+	//myFirstServer.MyFirstServer()
+
+	result, err := forPersonalTraining.Divide(10, 0)
+	fmt.Println(result, err)
 }
