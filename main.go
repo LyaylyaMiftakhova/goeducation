@@ -1,32 +1,35 @@
 package main
 
 import (
-	"example.com/goeducation/promotion"
+	"example.com/goeducation/culculations"
+	"example.com/goeducation/deleteNumber"
+	"example.com/goeducation/forPersonalTraining"
+	"example.com/goeducation/goroutinesHomeWork"
+	_return "example.com/goeducation/return"
 	"fmt"
 )
 
 func main() {
-	/*
-		max := culculations.GetMax(2459234234)
-		fmt.Println(max)
 
-		reversed := _return.GetReversedInt(12345678)
-		fmt.Println(reversed)
+	max := culculations.GetMax(2459234234)
+	fmt.Println(max)
 
-		reversed, err := deleteNumber.RemoveDigit(34567, 7)
-		if err != nil {
-			fmt.Println("Ошибка:", err)
-			return
-		}
-		fmt.Println(reversed)
+	reversed := _return.GetReversedInt(12345678)
+	fmt.Println(reversed)
 
-		myFirstServer.MyFirstServer()
+	reversed, err := deleteNumber.RemoveDigit(34567, 7)
+	if err != nil {
+		fmt.Println("Ошибка:", err)
+		return
+	}
+	fmt.Println(reversed)
 
-		result, err := forPersonalTraining.Divide(10, 0)
-		fmt.Println(result, err)
-	*/
+	//myFirstServer.MyFirstServer()
 
-	//Реализация по ПП
+	result, err := forPersonalTraining.Divide(10, 0)
+	fmt.Println(result, err)
+
+	/*Реализация по ПП
 	naturalIds := make([]int64, 48)
 	adIds := make([]int64, 48)
 
@@ -35,4 +38,8 @@ func main() {
 	resultPP := promotion.InsertAds(n, i, [48]int64(naturalIds), adIds)
 
 	fmt.Println(resultPP)
+	*/
+
+	//Задание по горутинам
+	goroutinesHomeWork.GoroutinesHomeWork()
 }
