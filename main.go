@@ -4,7 +4,6 @@ import (
 	"example.com/goeducation/culculations"
 	"example.com/goeducation/deleteNumber"
 	"example.com/goeducation/forPersonalTraining"
-	"example.com/goeducation/goroutinesHomeWork"
 	_return "example.com/goeducation/return"
 	"fmt"
 )
@@ -41,5 +40,7 @@ func main() {
 	*/
 
 	//Задание по горутинам
-	goroutinesHomeWork.GoroutinesHomeWork()
+	//goroutinesHomeWork.GoroutinesHomeWork()
+
+	fmt.Println(forPersonalTraining.DomainForLocale("en", "ru"))
 }
